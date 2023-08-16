@@ -1,0 +1,54 @@
+.bookCard{
+    border : 1px solid lightgray;
+    width: 200px;
+    border-radius: 15px;
+    margin:20px;
+    transition:transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.bookCard:hover{
+    transform: translateY(5px);
+    border: 1px solid white;
+    box-shadow: 4px 6px 18px 6px #eee;
+}
+.bookCard img{
+    width:100%;
+    height:200px;
+    border-radius: 15px 15px 0 0 ;
+    object-fit: cover;
+}
+
+.bookCard button{
+    margin-bottom: 5px;
+    font-weight: bold;
+    border: 1px solid #240370;
+    background-color: #240370;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
+.book-detail{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px  ;
+}
+.book-detail h4{
+    margin: 5px 0 2px 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+.book-price{
+    color:rgb(77, 74, 74);
+    
+}
+
+.book-genre{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:rgb(77, 74, 74);
+    margin-bottom: 8px;
+}
+

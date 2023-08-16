@@ -1,0 +1,84 @@
+.header{
+    margin:10px;
+}
+
+.sub-header{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-top: 10px;
+
+}
+.sub-header input{
+    margin-left:75px;
+    width:500px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.center-placeholder {
+    padding: 10px ; 
+}
+
+.logos{
+    margin-left: 100px;
+    display: flex;
+    gap:8px;
+    align-items: center;
+    color:rgb(110, 101, 101);
+    position: relative; 
+}
+
+.signIn_detail , 
+.cart_detail{
+    display: flex;
+    align-items: center;
+}
+
+.cart-title
+.signIn-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.signIn-title:hover , .cart-title:hover{
+    color: black;
+    font-weight: bold;
+}
+
+h1{
+    margin-left:90px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.sub-header1 {
+    margin-top: 20px;
+    color:rgb(110, 101, 101);
+    font-family: cursive;
+    
+}
+.close{
+    border-radius: 50%      ;
+}
+
+.cart-info{
+    display: flex;
+    align-items: center;
+}
+.cart-logo{
+    position: absolute;
+}
+.cart-count {
+    background-color: #240370;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    right: -46px;
+    width: 25px;
+    height: 25px;
+    
+}
+
+

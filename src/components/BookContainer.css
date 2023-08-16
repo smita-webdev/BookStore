@@ -1,0 +1,8 @@
+.book-container{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}

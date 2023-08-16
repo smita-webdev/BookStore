@@ -1,0 +1,41 @@
+.cart-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cart-list{
+    width: 300px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.cart-list h4{
+    margin-left:5px;
+}
+
+.cart-amount h4{
+    margin-right: 50px;
+}
+
+.cart-amount{
+    width: 300px;
+    text-align: left;
+    margin-right: 80px;
+}
+
+.cart-container button{
+  margin-top: 10px;
+  width:150px;
+  font-weight: bold;
+  border: 1px solid #240370;
+  background-color: #240370;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quantity-control{
+    display:flex;
+    gap:10px;
+}
