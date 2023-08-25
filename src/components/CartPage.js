@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import { PlusBtn, MinusBtn } from "../assets";
 import "./CartPage.css";
 import { useEffect, useState } from "react";
-//import { Alert } from "@mui/material";
 
 const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -50,9 +49,10 @@ const CartPage = () => {
   const [couponCode, setcouponCode] = useState("");
   const [discountValue, setDiscountValue] = useState("");
   // const [couponValue, setCouponValue] = useState('');
-
+  console.log("coupon_code", allCoupons[couponCode], allCoupons, couponCode);
   const handleApplyCoupon = () => {
     let cartTotalAgg;
+
     //const allCoupons = JSON.parse(localStorage.getItem("couponCodes"));
     if (couponCode && allCoupons[couponCode]) {
       const { value: couponValue, type: couponType } = allCoupons[couponCode];
@@ -86,7 +86,11 @@ const CartPage = () => {
             type="text"
             label="couponcode"
             placeholder="enter coupon code"
-            onChange={(e) => setcouponCode(e.currentTarget.value)}
+            onChange={(e) =>
+              setcouponCode(
+                e?.currentTarget?.value ? e.currentTarget?.value : ""
+              )
+            }
           ></input>
           <button onClick={handleApplyCoupon}>Apply</button>
         </div>
@@ -94,9 +98,12 @@ const CartPage = () => {
           Discount Applied :
           {couponCode &&
           allCoupons[couponCode] &&
+          allCoupons[couponCode]?.value &&
           allCoupons[couponCode]?.type === "percentage"
             ? `- ${allCoupons[couponCode].value}% OFF`
-            : `- FLAT ${allCoupons[couponCode].value} OFF`}
+            : allCoupons[couponCode] && allCoupons[couponCode].value
+            ? `- FLAT ${allCoupons[couponCode].value} OFF`
+            : ""}
         </h4>
         <h4>Total Amount: {cartTotal}</h4>
         <button type="submit">CheckOut</button>
