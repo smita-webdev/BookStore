@@ -4,8 +4,18 @@ import axios from "axios";
 import { Navigate } from "react-router-dom";
 import { Container } from "@mui/material";
 
+import book1Cover from "../images/book1.jpg";
+import book2Cover from "../images/book2.jpg";
+import book3Cover from "../images/book3.jpg";
+
 const BookCard = ({ key, title, price, discount, genre, img, addToCart }) => {
   const [isUserFetched, setisUserFetched] = useState(false);
+
+  const bookCoverImage = {
+    'book1.jpg': book1Cover,
+    'book2.jpg': book2Cover,
+    'book3.jpg':book3Cover
+  }
 
   // const fetchUser = async () => {
   //   try {
@@ -29,10 +39,11 @@ const BookCard = ({ key, title, price, discount, genre, img, addToCart }) => {
   //     console.log("fetch 2nd");
   //   }
   // }, [isUserFetched]);
+  // src/images/book1.jpg
 
   return (
     <div class="bookCard">
-      <img src={img} alt={title} />
+      <img src={bookCoverImage[img]} alt={title} />
       <Container
         sx={{
           display: "flex",
